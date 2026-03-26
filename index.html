@@ -92,25 +92,34 @@ ul {
 .fee-box p {
     margin: 8px 0;
 }
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-button {
-    background: #144a8a;
+.btn-inscription {
+    display: inline-block;
+    background-color: #144a8a;
     color: white;
-    padding: 12px 22px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
 }
-button:hover {
-    opacity: 0.9;
+.btn-inscription:hover {
+    background-color: #0d2c54;
+}
+.participants-list {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.participants-list ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.participants-list li {
+    margin: 10px 0;
+    font-size: 16px;
 }
 footer {
     background: #0d2c54;
@@ -118,12 +127,17 @@ footer {
     text-align: center;
     padding: 20px;
 }
+.note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+    font-style: italic;
+}
 </style>
 </head>
 <body>
 
 <header>
-    <!-- CINQ LOGOS (fichiers à placer dans le même dossier) -->
     <div class="logo-container">
         <img src="logofsg.png" alt="Logo FSG" onerror="this.style.display='none'">
         <img src="logoLR17ES11.jpg" alt="Logo LR17ES11" onerror="this.style.display='none'">
@@ -136,7 +150,6 @@ footer {
     <h3>International Conference</h3>
     <h3>Monastir, Tunisia — 25–28 October 2026</h3>
 
-    <!-- IMAGE PRINCIPALE (image3.jpg) -->
     <div class="main-image">
         <img src="image3.jpg" alt="Conference visual" onerror="this.style.display='none'">
     </div>
@@ -148,39 +161,39 @@ footer {
 <a href="#topics">Thématiques</a>
 <a href="#dates">Dates</a>
 <a href="#registration">Inscription</a>
+<a href="#participants">Participants</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- ===== PRÉSENTATION ===== -->
+<!-- PRÉSENTATION -->
 <section id="presentation">
 <h2>Presentation</h2>
 <p>This international conference focuses on the interplay between modular forms, geometry, complex analysis, and dynamical systems. Modular forms, with their Fourier expansions and transformation laws, remain central to modern number theory, encoding deep information related to L-functions and Galois representations. Key themes include the use of complex analytic methods—such as the study of Bergman spaces, growth estimates, and analytic continuation, to investigate hyperbolicity in complex geometry. The program also explores connections between dynamics, such as Perron numbers and β‑expansions, illustrating how symbolic dynamics can encode arithmetic information. Special functions serve as a bridge linking these areas. Key examples include theta functions, hypergeometric series, and orthogonal polynomials, which reveal deep properties through their special values and transformation formulas. Recent advances in topological dynamics are also highlighted, including recurrence phenomena, limit sets in continuum theory, and the behavior of maps on regular curves and local dendrites. Analytic tools such as functional equations further illuminate the underlying arithmetic and geometric structures, providing a unifying framework across these disciplines.</p>
 </section>
 
-<!-- ===== INFORMATIONS GÉNÉRALES ===== -->
+<!-- INFORMATIONS GÉNÉRALES -->
 <section id="info">
 <h2>Informations générales</h2>
 <ul>
 <li><strong>Chair :</strong> Najib Ouled Azaiez</li>
-<li><strong>Organizing Committee :</strong> Najib Ouled Azaiez, Samir Marouani, Hachem Hichri. </li>
+<li><strong>Organizing Committee :</strong> Najib Ouled Azaiez, Samir Marouani, Hachem Hichri.</li>
 <li><strong>Scientific Committee :</strong> Fathi Haggui, Nourdine Ghiloufi</li>
 <li><strong>Location :</strong> Monastir, Tunisia</li>
 <li><strong>Dates :</strong> 25–28 October 2026</li>
 </ul>
 
-<!-- FRAIS D'INSCRIPTION (français exact du poster) -->
 <div class="fee-box">
-<h3 style="margin-top:0; color:#0d2c54;">Frais d’inscription et de séjour</h3>
-<p><strong>Les frais d’inscription et de séjour (autour de 225 € / 760 TND) couvrent pour les trois nuits :</strong></p>
+<h3 style="margin-top:0; color:#0d2c54;">Frais d'inscription et de séjour</h3>
+<p><strong>Les frais d'inscription et de séjour (autour de 225 € / 760 TND) couvrent pour les trois nuits :</strong></p>
 <ul>
-<li>L’hébergement à l’hôtel en chambre double (pension complète).</li>
+<li>L'hébergement à l'hôtel en chambre double (pension complète).</li>
 <li>Les documents de la conférence.</li>
 <li>Les pauses-café et repas.</li>
 </ul>
 </div>
 </section>
 
-<!-- ===== THÉMATIQUES DÉTAILLÉES ===== -->
+<!-- THÉMATIQUES DÉTAILLÉES -->
 <section id="topics">
 <h2>Detailed Topics</h2>
 <ul>
@@ -193,7 +206,7 @@ footer {
 </ul>
 </section>
 
-<!-- ===== DATES IMPORTANTES ===== -->
+<!-- DATES IMPORTANTES -->
 <section id="dates">
 <h2>Important Dates</h2>
 <ul>
@@ -203,38 +216,36 @@ footer {
 </ul>
 </section>
 
-<!-- ===== INSCRIPTION ===== -->
+<!-- INSCRIPTION -->
 <section id="registration">
 <h2>Inscription</h2>
-<p>Veuillez remplir le formulaire ci‑dessous pour une pré‑inscription. Les frais (environ 250 € / 850 TND) couvrent l’hébergement en chambre double (pension complète), les documents, les pauses‑café et les repas.</p>
+<p>Veuillez remplir le formulaire en ligne ci-dessous pour vous inscrire à la conférence. Après validation de votre inscription par le comité d'organisation, votre nom apparaîtra dans la liste des <strong>Participants confirmés</strong>.</p>
 
-<form action="mailto:najouled@gmail.com" method="post" enctype="text/plain" target="_blank">
-<label>Nom complet</label>
-<input type="text" name="name" required>
-
-<label>Affiliation</label>
-<input type="text" name="affiliation" required>
-
-<label>Email</label>
-<input type="email" name="email" required>
-
-<label>Titre de la communication (optionnel)</label>
-<input type="text" name="talk">
-
-<label>Message / demandes spéciales</label>
-<textarea name="message" rows="4"></textarea>
-
-<button type="submit">Envoyer l'inscription</button>
-</form>
+<a href="https://docs.google.com/forms/d/1xa91II1LdBAqLymrI7b3Ca5VnWeWDELqZSN7GesCuYI/viewform" class="btn-inscription" target="_blank">📝 Formulaire d'inscription en ligne</a>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- PARTICIPANTS CONFIRMÉS -->
+<section id="participants">
+<h2>Participants confirmés</h2>
+<p>Liste des participants dont l'inscription a été validée par le comité d'organisation :</p>
+
+<div class="participants-list">
+    <ul>
+        
+      <li>Prof. Najib Ouled Azaiez - Université de Sfax, Tunisie</li>
+        
+    </ul>
+</div>
+
+<p class="note">📋 Liste mise à jour régulièrement. Dernière mise à jour : 26 mars 2026</p>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <p><strong>Email :</strong> najouled(at)gmail.com</p>
 <p><strong>Institutional contacts :</strong> najib.ouledazaiez(at)fss.usf.tn &nbsp; | &nbsp; hachem.hichri(at)ipeim.rnu.tn</p>
 <p><strong>Website :</strong> en cours de construction</p>
-
 </section>
 
 <footer>
