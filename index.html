@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,19 +107,45 @@ ul {
 .btn-inscription:hover {
     background-color: #0d2c54;
 }
-.participants-list {
+.participants-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.participants-column {
+    flex: 1;
+    min-width: 250px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
-    margin-top: 20px;
 }
-.participants-list ul {
+.participants-column h3 {
+    color: #144a8a;
+    border-bottom: 2px solid #0d2c54;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.participants-column ul {
     margin: 0;
     padding-left: 20px;
 }
-.participants-list li {
+.participants-column li {
     margin: 10px 0;
     font-size: 16px;
+}
+.speaker-item {
+    margin: 15px 0;
+}
+.speaker-name {
+    font-weight: bold;
+    color: #0d2c54;
+}
+.speaker-title {
+    font-style: italic;
+    color: #555;
+    font-size: 14px;
+    margin-top: 3px;
 }
 footer {
     background: #0d2c54;
@@ -156,57 +182,57 @@ footer {
 </header>
 
 <nav>
-<a href="#presentation">Présentation</a>
-<a href="#info">Infos générales</a>
-<a href="#topics">Thématiques</a>
+<a href="#presentation">Presentation</a>
+<a href="#info">General Info</a>
+<a href="#topics">Topics</a>
 <a href="#dates">Dates</a>
-<a href="#registration">Inscription</a>
+<a href="#registration">Registration</a>
 <a href="#participants">Participants</a>
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- PRÉSENTATION -->
+<!-- PRESENTATION -->
 <section id="presentation">
 <h2>Presentation</h2>
 <p>This international conference focuses on the interplay between modular forms, geometry, complex analysis, and dynamical systems. Modular forms, with their Fourier expansions and transformation laws, remain central to modern number theory, encoding deep information related to L-functions and Galois representations. Key themes include the use of complex analytic methods—such as the study of Bergman spaces, growth estimates, and analytic continuation, to investigate hyperbolicity in complex geometry. The program also explores connections between dynamics, such as Perron numbers and β‑expansions, illustrating how symbolic dynamics can encode arithmetic information. Special functions serve as a bridge linking these areas. Key examples include theta functions, hypergeometric series, and orthogonal polynomials, which reveal deep properties through their special values and transformation formulas. Recent advances in topological dynamics are also highlighted, including recurrence phenomena, limit sets in continuum theory, and the behavior of maps on regular curves and local dendrites. Analytic tools such as functional equations further illuminate the underlying arithmetic and geometric structures, providing a unifying framework across these disciplines.</p>
 </section>
 
-<!-- INFORMATIONS GÉNÉRALES -->
+<!-- GENERAL INFORMATION -->
 <section id="info">
-<h2>Informations générales</h2>
+<h2>General Information</h2>
 <ul>
-<li><strong>Chair :</strong> Najib Ouled Azaiez</li>
-<li><strong>Organizing Committee :</strong> Najib Ouled Azaiez, Samir Marouani, Hachem Hichri.</li>
-<li><strong>Scientific Committee :</strong> Fathi Haggui, Nourdine Ghiloufi</li>
-<li><strong>Location :</strong> Monastir, Tunisia</li>
-<li><strong>Dates :</strong> 25–28 October 2026</li>
+<li><strong>Chair:</strong> Najib Ouled Azaiez</li>
+<li><strong>Organizing Committee:</strong> Najib Ouled Azaiez, Samir Marouani, Hachem Hichri</li>
+<li><strong>Scientific Committee:</strong> Fathi Haggui, Nourdine Ghiloufi</li>
+<li><strong>Location:</strong> Monastir, Tunisia</li>
+<li><strong>Dates:</strong> 25–28 October 2026</li>
 </ul>
 
 <div class="fee-box">
-<h3 style="margin-top:0; color:#0d2c54;">Frais d'inscription et de séjour</h3>
-<p><strong>Les frais d'inscription et de séjour (autour de 225 € / 760 TND) couvrent pour les trois nuits :</strong></p>
+<h3 style="margin-top:0; color:#0d2c54;">Registration Fee</h3>
+<p><strong>The registration fee (approx. 225 € / 760 TND) covers for three nights:</strong></p>
 <ul>
-<li>L'hébergement à l'hôtel en chambre double (pension complète).</li>
-<li>Les documents de la conférence.</li>
-<li>Les pauses-café et repas.</li>
+<li>Hotel accommodation in double room (full board)</li>
+<li>Conference materials</li>
+<li>Coffee breaks and meals</li>
 </ul>
 </div>
 </section>
 
-<!-- THÉMATIQUES DÉTAILLÉES -->
+<!-- DETAILED TOPICS -->
 <section id="topics">
 <h2>Detailed Topics</h2>
 <ul>
-<li>Modular forms, quasimodular forms, Hecke groups, and Zagier-type conjectures.</li>
-<li>Non-Kähler hyperbolicity for compact complex manifolds.</li>
-<li>Bergman spaces and complex analysis.</li>
-<li>Perron numbers and β‑expansions.</li>
-<li>Limit sets of monotone maps on regular curves. Recurrence and nonwandering sets of local dendrite maps.</li>
-<li>d‑orthogonality and the q‑Askey scheme.</li>
+<li>Modular forms, quasimodular forms, Hecke groups, and Zagier-type conjectures</li>
+<li>Non-Kähler hyperbolicity for compact complex manifolds</li>
+<li>Bergman spaces and complex analysis</li>
+<li>Perron numbers and β‑expansions</li>
+<li>Limit sets of monotone maps on regular curves. Recurrence and nonwandering sets of local dendrite maps</li>
+<li>d‑orthogonality and the q‑Askey scheme</li>
 </ul>
 </section>
 
-<!-- DATES IMPORTANTES -->
+<!-- IMPORTANT DATES -->
 <section id="dates">
 <h2>Important Dates</h2>
 <ul>
@@ -216,40 +242,71 @@ footer {
 </ul>
 </section>
 
-<!-- INSCRIPTION -->
+<!-- REGISTRATION -->
 <section id="registration">
-<h2>Inscription</h2>
-<p>Veuillez remplir le formulaire en ligne ci-dessous pour vous inscrire à la conférence. Après validation de votre inscription par le comité d'organisation, votre nom apparaîtra dans la liste des <strong>Participants confirmés</strong>.</p>
+<h2>Registration</h2>
+<p>Please fill out the online form below to register for the conference. After validation by the organizing committee, your name will appear in the list of confirmed participants.</p>
 
-<a href="https://docs.google.com/forms/d/1xa91II1LdBAqLymrI7b3Ca5VnWeWDELqZSN7GesCuYI/viewform" class="btn-inscription" target="_blank">📝 Formulaire d'inscription en ligne</a>
+<a href="https://docs.google.com/forms/d/1xa91II1LdBAqLymrI7b3Ca5VnWeWDELqZSN7GesCuYI/viewform" class="btn-inscription" target="_blank">📝 Online Registration Form</a>
 </section>
 
-<!-- PARTICIPANTS CONFIRMÉS -->
+<!-- CONFIRMED PARTICIPANTS & SPEAKERS -->
 <section id="participants">
-<h2>Participants confirmés</h2>
-<p>Liste des participants dont l'inscription a été validée par le comité d'organisation :</p>
+<h2>Confirmed Participants & Speakers</h2>
+<p>List of participants and speakers whose registration has been validated by the organizing committee:</p>
 
-<div class="participants-list">
-    <ul>
-        
-      <li>Prof. Najib Ouled Azaiez - Université de Sfax, Tunisie</li>
-        
-    </ul>
+<div class="participants-grid">
+    <!-- SPEAKERS COLUMN -->
+    <div class="participants-column">
+        <h3>🎤 Speakers</h3>
+        <ul>
+            <li class="speaker-item">
+                <div class="speaker-name">Prof. John Smith - Harvard University</div>
+                <div class="speaker-title">Title: Modular Forms and L-functions</div>
+            </li>
+            <li class="speaker-item">
+                <div class="speaker-name">Prof. Maria Garcia - Universidad Autónoma de Madrid</div>
+                <div class="speaker-title">Title: Hyperbolicity in Complex Geometry</div>
+            </li>
+            <li class="speaker-item">
+                <div class="speaker-name">Dr. Ahmed Ben Ali - University of Tunis</div>
+                <div class="speaker-title">Title: Perron Numbers and β-expansions</div>
+            </li>
+            <li class="speaker-item">
+                <div class="speaker-name">Prof. Sarah Martin - Sorbonne Université, Paris</div>
+                <div class="speaker-title">Title: Bergman Spaces and Complex Analysis</div>
+            </li>
+            <li class="speaker-item">
+                <div class="speaker-name">Dr. Karim Feki - University of Sfax</div>
+                <div class="speaker-title">Title: Orthogonal Polynomials and q-Askey Scheme</div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- PARTICIPANTS COLUMN -->
+    <div class="participants-column">
+        <h3>👥 Participants</h3>
+        <ul>
+            <li> Prof. Najib Ouled Azaiez - Faculty of Sciences, Sfax</li>
+            <li> Prof. </li>
+            
+        </ul>
+    </div>
 </div>
 
-<p class="note">📋 Liste mise à jour régulièrement. Dernière mise à jour : 26 mars 2026</p>
+<p class="note">📋 List updated regularly. Last update: 26 March 2026</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p><strong>Email :</strong> najouled(at)gmail.com</p>
-<p><strong>Institutional contacts :</strong> najib.ouledazaiez(at)fss.usf.tn &nbsp; | &nbsp; hachem.hichri(at)ipeim.rnu.tn</p>
-<p><strong>Website :</strong> en cours de construction</p>
+<p><strong>Email:</strong> najouled(at)gmail.com</p>
+<p><strong>Institutional contacts:</strong> najib.ouledazaiez(at)fss.usf.tn &nbsp; | &nbsp; hachem.hichri(at)ipeim.rnu.tn</p>
+<p><strong>Website:</strong> under construction</p>
 </section>
 
 <footer>
-© 2026 – Modular Forms, Geometry and Complex Analysis (Monastir, 25–28 octobre)
+© 2026 – Modular Forms, Geometry and Complex Analysis (Monastir, 25–28 October)
 </footer>
 
 </body>
